@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgAHUlBQGwEBU1VRAwM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+<title>Caramel Caffè Latte | Peet's Coffee &amp; Tea</title>
+<meta name="description" content="Caramel Caffè Latte prefectly pairs mouth-watering flavors: sweet caramel sauce, deep-roasted espresso and freshly steamed milk." />
+<meta name="keywords" content="Caramel Caffè Latte" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=mobile-width, initial-scale=0.65" />
+<link rel="icon" href="http://d3mrtwiv4dr09z.cloudfront.net/media/favicon/default/peets-logo-ico_2.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://d3mrtwiv4dr09z.cloudfront.net/media/favicon/default/peets-logo-ico_2.ico" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = 'http://www.peets.com/js/blank.html';
+    var BLANK_IMG = 'http://www.peets.com/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.peets.com/js/calendar/calendar-win2k-1.css?v=56" />
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/css/merged-pct-1.min.css?v=56" media="all" />
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/css/merged-pct-2.min.css?v=56" media="all" />
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/css/merged-pct-3.min.css?v=56" media="all" />
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/ig_lightbox2/prettyphoto/css/prettyPhoto.css?v=56" media="all" />
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/default/css/print.css?v=56" media="print" />
+<script type="text/javascript" src="http://d3mrtwiv4dr09z.cloudfront.net/media/js/aad0dcf21a42bf5a9a3cb277731ea355.js?v=56" id="js001"></script>
+<script type="text/javascript" src="http://d3mrtwiv4dr09z.cloudfront.net/media/js/b60ee063c0c48e25902091fec71eaa20.js?v=56"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/css/styles-ie.css?v=56" media="all" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="http://d3mrtwiv4dr09z.cloudfront.net/media/js/0e2a29ac88e049ee12a0ffbbe0b3afce.js?v=56"></script>
+<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+// add no conflict //
+var $jq = jQuery.noConflict();
+//]>
+</script>
+<script type="text/javascript" src="//use.typekit.net/uzb3gue.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.peets.com';
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["AF","AX","AL","DZ","AS","AD","AO","AI","AQ","AG","AR","AM","AW","AU","AT","AZ","BS","BH","BD","BB","BY","BE","BZ","BJ","BM","BT","BO","BA","BW","BV","BR","IO","VG","BN","BG","BF","BI","KH","CM","CV","KY","CF","TD","CL","CN","CX","CC","CO","KM","CG","CD","CK","CR","CI","HR","CU","CY","CZ","DK","DJ","DM","DO","EC","EG","SV","GQ","ER","EE","ET","FK","FO","FJ","FI","FR","GF","PF","TF","GA","GM","GE","DE","GH","GI","GR","GL","GD","GP","GU","GT","GG","GN","GW","GY","HT","HM","HN","HK","HU","IS","IN","ID","IR","IQ","IE","IM","IL","IT","JM","JP","JE","JO","KZ","KE","KI","KW","KG","LA","LV","LB","LS","LR","LY","LI","LT","LU","MO","MK","MG","MW","MY","MV","ML","MT","MH","MQ","MR","MU","YT","MX","FM","MD","MC","MN","ME","MS","MA","MZ","MM","NA","NR","NP","NL","AN","NC","NZ","NI","NE","NG","NU","NF","MP","KP","NO","OM","PK","PW","PS","PA","PG","PY","PE","PH","PN","PL","PT","PR","QA","RE","RO","RU","RW","BL","SH","KN","LC","MF","PM","VC","WS","SM","ST","SA","SN","RS","SC","SL","SG","SK","SI","SB","SO","ZA","GS","KR","ES","LK","SD","SR","SJ","SZ","SE","CH","SY","TW","TJ","TZ","TH","TL","TG","TK","TO","TT","TN","TR","TM","TC","TV","UG","UA","AE","GB","UY","UZ","VU","VA","VE","VN","WF","EH","YE","ZM","ZW"];
+//]]>
+</script>
+<!-- BEGIN GOOGLE ANALYTICS CODEs -->
+<script type="text/javascript">
+//<![CDATA[
+    var _gaq = _gaq || [];
+    
+_gaq.push(['_setAccount', 'UA-29851657-1']);
+_gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+//]]>
+</script>
+<!-- END GOOGLE ANALYTICS CODE -->
+    <link rel="canonical" href="http://www.peets.com/stores/menus/coffee-espresso-beverages/caramel-caffe-latte.html" />
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery('.livechat-section').hide();
+        });
+    </script>
+<style type="text/css">
+.product-image {background-image:none;}
+.nutri-info h2 {width:auto;}
+tr:nth-child(even) td { background:#EEEADD; }
+tr:nth-child(odd) td { background:#E9E4D3; }
+tr.topHeadLs { background-color:transparent; }
+.product-overview-short-description.storemenuitem, .nutritioninfo.anchors {padding-left:25px;float:left;}
+.catalog-product-view .product-view .product-name.storemenuitem {padding:5px 0 30px 53px;}
+.col2-left-layout .product-view .product-img-box, .col2-right-layout .product-view .product-img-box {padding-left:30px;}
+.col2-left-layout .product-view, .col2-right-layout .product-view {width:935px;}
+.product-view .product-view-lc {float:left;width:650px;}
+.product-view .product-view-rc {float:left;width:240px;padding:0;}
+body.catalog-product-view.category-stores-coffee-menu div#wrapper div.main-container div.main div.col-main div.inner-main div.product-view div.product-essential div.product-img-box p.product-image, body.catalog-product-view.category-stores-tea-menu div#wrapper div.main-container div.main div.col-main div.inner-main div.product-view div.product-essential div.product-img-box p.product-image, body.catalog-product-view.category-stores-blended-freddo div#wrapper div.main-container div.main div.col-main div.inner-main div.product-view div.product-essential div.product-img-box p.product-image, body.catalog-product-view.category-stores-cafe-specialty-items div#wrapper div.main-container div.main div.col-main div.inner-main div.product-view div.product-essential div.product-img-box p.product-image {margin:0 auto;}
+.find-peets-module {margin-bottom:120px;}
+.need-help-popup {right:55px;}
+div.find-peets-module div.item-1 div.promo a.subtext:hover {text-decoration:underline;}
+.product-img-box.storemenuitem .violator-New, .product-img-box.storemenuitem .violator-Seasonal_Favorite {margin-left:10px;top:0px;}
+.need-help-chat {display:none;}
+.long-description p:last-child {display:block;margin-left:32px;margin-bottom:10px;}
+.inner-main .addtl-info {width:66%;margin-left:75px;margin-bottom:10px;}
+</style>
+<script type="text/javascript">//<![CDATA[
+        var Translator = new Translate([]);
+        //]]></script><!-- test -->
+<script type="text/javascript">
+adroll_adv_id = "GC3PQFPP6ZES7HVFJAQVSG";
+adroll_pix_id = "N6YWLGPTP5AZTNDRY2FHWQ";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<meta name="msvalidate.01" content="03D2C2142D68DB730C2BE12B7C458F39" />
+<style>
+body {text-rendering: auto;}
+</style></head>
+<body class=" catalog-product-view catalog-product-view product-caramel-caffe-latte categorypath-stores-menus-coffee-espresso-beverages-html category-coffee-espresso-beverages">
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Peets Universal Header Tag
+URL of the webpage where the tag is expected to be placed: http://www.peets.com
+Creation Date: 10/23/2013
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="//4214366.fls.doubleclick.net/activityi;src=4214366;type=peets878;cat=peets113;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="//4214366.fls.doubleclick.net/activityi;src=4214366;type=peets878;cat=peets113;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove --><!-- Google Tag Manager -->
+<script>dataLayer = [{"visitorLoginState":"Logged out","visitorType":"NOT LOGGED IN","visitorLifetimeValue":0,"visitorExistingCustomer":"No"}];</script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWSRZ5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MWSRZ5');</script>
+<!-- End Google Tag Manager -->
+<style type="text/css">
+            .header-poromo-top .new-opener:before{
+        background: url("http://d3mrtwiv4dr09z.cloudfront.net/media/promobanner/default/_thumb_14136.png") no-repeat;
+    }
+    </style>
+
+<div class="header-poromo-top">
+    <div class="promo-holder clearfix">
+        <span class="new-opener ">FREE SHIPPING on orders $59 or more*</span>
+        <ul class="promo-links">
+            <li><a class="call" href="https://www.peets.com/customer-service/contact-us/">(800) 999-2132</a></li>
+            <li><a class="email" href="https://www.peets.com/customer-service/contact-us/">Email Us 24/7</a></li>
+        </ul>
+    </div>
+    <div class="promobanner-popup">
+        <div class="promobanner-popup-overflow"></div>
+        <div class="promobanner-popup-frame">
+            <span class="close">close</span>
+            <div class="promobanner-popup-holder">
+                <div class="promobanner-content">
+                    <div class="visual"><img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/popup-promo.png" alt="promo image" /></div>
+<div class="promo-title">Free ship on any order $59 or more*</div>
+<div class="sub-title"></div>
+<div class="separator"></div>
+<div class="sub-title2">No promotion code necessary</div>
+<p>*Receive free domestic ground shipping on any order $59 or more. $59 minimum does not include taxes or shipping, per shipping address. If you select Next Day or 2nd Day Air shipping, the cost of domestic US ground shipping will be credited toward your shipping costs. Offer is not valid in stores and does not apply to Peet's Cards, Monthly Coffee Tours or previous purchases. Cannot be combined with any other offer or discount.</p>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div class="top-navigation-holder">
+        <div id="top-navigation">
+                         <div id="logo"><a href="http://www.peets.com/"><img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/logo.png" alt="Peet's Coffee &amp; Tea" /></a></div>
+
+                        <div class="upper-navigation">
+                <a href="http://www.peets.com/store-locator" class="find-peets">Find Peet's</a>.
+                <div class="usercp-wrapper user-links">
+                    <div id="top-cart-container" class="top-cart">
+                                            </div>
+                    <div id="welcome-container" class="welcome-wrapper">
+                        <p class="welcome-msg">
+                            <a href="#" class="user-account name"></a>
+                            <span class="user-account separator" style="padding:0 3px; display: none; color:#fff">|</span>
+                            <a href="#" class="user-account action"></a>
+                        </p>
+                                                <div id="mini-account-container" class="mini-account">
+                                                    </div>
+                                            </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+    //<![CDATA[
+        Peets.Customer.status('http://www.peets.com/ajaxcontroller/customer/status/top_cart/1/mini_account/1/', {
+        loginUrl:      'https://www.peets.com/customer/account/login/',
+        logoutUrl:     'https://www.peets.com/customer/account/logout/',
+        accountUrl:    'https://www.peets.com/customer/account/',
+        persistentUrl: 'http://www.peets.com/persistent/index/unsetCookie/',
+        isShowMiniAccount: true    });
+    //]]>
+            </script>
+                <div class="global-nav-container">
+        <ul id="global-nav" class="global-nav">
+            <li class="level0 nav-1 level-top first">
+<a href="http://www.peets.com/craft.html" class="level-top">
+
+<span>Craft</span>
+</a>
+</li><li class="level0 nav-2 level-top parent" data-sub-nav-toggle="sub-nav-2">
+<a href="http://www.peets.com/coffee.html" class="level-top">
+
+<span>Coffee</span>
+</a>
+<div   class="top-nav top-nav-columns-4 top-nav-coffee" data-sub-nav-content="sub-nav-2">
+<div class="top-nav-inner">
+<div class="top-nav-main">
+<div class="top-nav-header"><div class="top-nav-header-inner"><a href="http://www.peets.com/coffee/coffee-all-beans.html">SEE ALL COFFEES &#187;</a></div></div>
+
+<div class="top-nav-items">
+<div class="top-nav-items-inner">
+<div class="top-nav-row top-nav-row-1 top-nav-row-first"><dl class="sub-category"><dt><strong>Featured Coffee</strong></dt><dd><a href="http://www.peets.com/coffee/featured-coffee/holiday-blend-2015.html">Holiday Blend 2015</a></dd>
+<dd><a href="http://www.peets.com/coffee/featured-coffee/coffee-shop-by-category-limited-editions.html">Limited Editions</a></dd>
+<dd><a href="http://www.peets.com/coffee/featured-coffee/coffee-shop-by-category-top-sellers.html">Top Sellers</a></dd>
+<dd><a href="http://www.peets.com/coffee/featured-coffee/coffee-shop-by-category-signature-blends.html">Signature Blends</a></dd>
+<dd><a href="http://www.peets.com/coffee/featured-coffee/coffee-shop-by-category-reserve-coffees.html">Reserve Coffees</a></dd>
+<dd><a href="http://www.peets.com/coffee/featured-coffee/all-coffees.html">All Coffees</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Roast</strong></dt><dd><a href="http://www.peets.com/coffee/by-roast/light-roast.html">Light</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-roast/coffee-shop-by-category-medium-roast.html">Medium</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-roast/dark.html">Dark</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Type</strong></dt><dd><a href="http://www.peets.com/coffee/by-type/coffee-shop-by-category-espresso.html">Espresso</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-type/coffee-shop-by-category-iced-coffee.html">Iced Coffee</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-type/coffee-shop-by-category-decaf.html">Decaf</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-type/half-caf.html">Half-Caf</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Region</strong></dt><dd><a href="http://www.peets.com/coffee/by-region/coffee-shop-by-category-americas.html">The Americas</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-region/coffee-shop-by-category-africa-arabia.html">Africa &amp; Arabia</a></dd>
+<dd><a href="http://www.peets.com/coffee/by-region/coffee-shop-by-category-indo-pacific.html">Indo-Pacific</a></dd>
+</dl></div><div class="top-nav-row top-nav-row-2 top-nav-row-last"><dl class="sub-category"><dt><strong>K-Cup® Packs</strong></dt><dd><a href="http://www.peets.com/coffee/k-cup-packs/all-kcups-packs.html">All K-Cup&reg; Packs</a></dd>
+<dd><a href="http://www.peets.com/solofill-k3-gold-reusable-single-cup.html">Reusable Single Cup</a></dd>
+</dl><dl class="sub-category"><dt><strong>Gifts &amp; Samplers</strong></dt><dd><a href="http://www.peets.com/coffee/gifts-samplers/coffee-gift-subscription.html">Coffee Gift Subscription</a></dd>
+<dd><a href="http://www.peets.com/coffee/gifts-samplers/holiday-coffee-gifts.html">Holiday Coffee Gifts</a></dd>
+<dd><a href="http://www.peets.com/coffee/gifts-samplers/coffee-gifts-coffee-samplers.html">Coffee Samplers</a></dd>
+<dd><a href="http://www.peets.com/coffee/gifts-samplers/treats-and-spices.html">Treats and Spices</a></dd>
+</dl><dl class="sub-category"><dt><strong>Equipment</strong></dt><dd><a href="http://www.peets.com/coffee/coffee-equipment-42/equipment-coffee-makers.html">Coffee Makers</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/brewing-essentials-kits.html">Brewing Essentials Kits</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/equipment-press-pot-brewing.html">Press Pot Brewing</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/equipment-grinders.html">Grinders</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/brewing-equipment.html">Brewing Equipment</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/equipment-mugs-tumblers-9.html">Mugs &amp; Tumblers</a></dd>
+<dd><a href="http://www.peets.com/coffee/coffee-equipment-42/equipment-storage-measuring.html">Storage </a></dd>
+</dl><dl class="sub-category"></dl></div>
+</div></div>
+<div class="top-nav-callout"><div class="top-nav-callout-content"><span>Save 10% on your order when you set up a coffee subscription.</span></div></div>
+
+</div>
+<div class="top-nav-aside"><div class="top-nav-aside-content"><div class="top-nav-aside-img"><img src="http://d3mrtwiv4dr09z.cloudfront.net/media/catalog/category/TopNavRightRail_RedMochaHaraaz.jpg" alt="Coffee" title="Coffee" /></div><div class="top-nav-aside-text"><h3>Red Mocha Haraaz</h3><p>The rarest, most complex and exciting coffee we have tasted this year. Aromas of Maraschino cherry and elderflower liqueur, deeply smooth with date sugars and a dusting of cinnamon.</p>
+<p><a href="coffee/featured-coffee/coffee-shop-by-category-limited-editions/red-mocha-haraaz.html">Shop Now &raquo;</a></p></div></div></div>
+
+</div>
+</li><li class="level0 nav-3 level-top parent" data-sub-nav-toggle="sub-nav-3">
+<a href="http://www.peets.com/tea.html" class="level-top">
+
+<span>Tea</span>
+</a>
+<div   class="top-nav top-nav-columns-4 top-nav-tea" data-sub-nav-content="sub-nav-3">
+<div class="top-nav-inner">
+<div class="top-nav-main">
+<div class="top-nav-header"><div class="top-nav-header-inner"><a href="http://www.peets.com/tea/tea-all-leaves.html">SEE ALL TEAS &#187;</a></div></div>
+
+<div class="top-nav-items">
+<div class="top-nav-items-inner">
+<div class="top-nav-row top-nav-row-1 top-nav-row-first"><dl class="sub-category"><dt><strong>Featured Tea</strong></dt><dd><a href="http://www.peets.com/tea/featured-tea/mighty-leaf-teas.html">Mighty Leaf Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/holiday-teas.html">Holiday Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/tea-shop-by-category-limited-editions.html">Limited Editions</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/tea-shop-by-category-top-sellers.html">Top Sellers</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/tea-shop-by-category-signature-blends.html">Signature Blends</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/tea-shop-by-category-rare-teas.html">Rare Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/featured-tea/all-teas.html">All Teas</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Form</strong></dt><dd><a href="http://www.peets.com/tea/by-form/tea-shop-by-category-tea-bags.html">Tea Bags</a></dd>
+<dd><a href="http://www.peets.com/tea/by-form/tea-shop-by-category-tea-by-the-pound.html">Tea by the Pound</a></dd>
+<dd><a href="http://www.peets.com/tea/by-form/loose-leaf.html">Loose Leaf</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Type</strong></dt><dd><a href="http://www.peets.com/tea/by-type/tea-shop-by-category-iced-teas.html">Iced</a></dd>
+<dd><a href="http://www.peets.com/tea/by-type/tea-shop-by-category-organic-teas.html">Organic</a></dd>
+<dd><a href="http://www.peets.com/tea/by-type/tea-shop-by-category-decaf-teas.html">Decaf</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Region</strong></dt><dd><a href="http://www.peets.com/tea/by-region/china.html">China</a></dd>
+<dd><a href="http://www.peets.com/tea/by-region/india-sri-lanka.html">India &amp; Sri Lanka</a></dd>
+<dd><a href="http://www.peets.com/tea/by-region/japan.html">Japan</a></dd>
+</dl></div><div class="top-nav-row top-nav-row-2 top-nav-row-last"><dl class="sub-category"><dt><strong>By Category</strong></dt><dd><a href="http://www.peets.com/tea/by-category/tea-shop-by-category-black-teas.html">Black Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/by-category/tea-shop-by-category-green-white-teas.html">Green &amp; White Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/by-category/tea-shop-by-category-oolong-teas.html">Oolong Teas</a></dd>
+<dd><a href="http://www.peets.com/tea/by-category/tea-shop-by-category-herbal-teas.html">Herbal Teas</a></dd>
+</dl><dl class="sub-category"><dt><strong>Gifts &amp; Samplers</strong></dt><dd><a href="http://www.peets.com/tea/gifts-samplers/holiday-tea-gifts.html">Holiday Tea Gifts</a></dd>
+<dd><a href="http://www.peets.com/tea/gifts-samplers/treats-and-spices.html">Treats and Spices</a></dd>
+</dl><dl class="sub-category"><dt><strong>Equipment</strong></dt><dd><a href="http://www.peets.com/tea/equipment/tea-equipment.html">Tea Equipment</a></dd>
+<dd><a href="http://www.peets.com/tea/equipment/mugs-tumblers.html">Mugs &amp; Tumblers</a></dd>
+<dd><a href="http://www.peets.com/tea/equipment/tea-inside-the-cup-tea-brewing.html">Tea Brewing</a></dd>
+</dl><dl class="sub-category"></dl></div>
+</div></div>
+
+</div>
+<div class="top-nav-aside"><div class="top-nav-aside-content"><div class="top-nav-aside-img"><img src="http://d3mrtwiv4dr09z.cloudfront.net/media/catalog/category/TopNavRightRail_HolidayTeas.jpg" alt="Tea" title="Tea" /></div><div class="top-nav-aside-text"><h3>Sip and Savor Our Holiday Teas</h3><p>Share the taste and aromas of new holiday teas and a returning favorite. </p>
+<p><a href="/tea/featured-tea/holiday-teas.html">Shop Now &raquo;</a></p></div></div></div>
+
+</div>
+</li><li class="level0 nav-4 level-top parent" data-sub-nav-toggle="sub-nav-4">
+<a href="http://www.peets.com/gifts-goods.html" class="level-top">
+
+<span>Gifts </span>
+</a>
+<div   class="top-nav top-nav-columns-4 top-nav-gifts-goods" data-sub-nav-content="sub-nav-4">
+<div class="top-nav-inner">
+<div class="top-nav-main">
+<div class="top-nav-header"><div class="top-nav-header-inner"><a href="http://www.peets.com/gifts-goods.html">SEE ALL GIFTS &#187;</a></div></div>
+
+<div class="top-nav-items">
+<div class="top-nav-items-inner">
+<div class="top-nav-row top-nav-row-1 top-nav-row-first"><dl class="sub-category"><dt><strong>Featured Gifts</strong></dt><dd><a href="http://www.peets.com/gifts-goods/featured-gifts/holiday-gifts.html">Holiday Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/featured-gifts/brewing-gifts.html">Brewing Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/featured-gifts/gifts-goods-top-sellers.html">Top Sellers</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/featured-gifts/gifts-goods-gift-collections.html">Gift Collections</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Price</strong></dt><dd><a href="http://www.peets.com/gifts-goods/by-price/gifts-goods-shop-by-price-gifts-under-25.html">Gifts under $25</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-price/gifts-goods-shop-by-price-gifts-25-50.html">Gifts $25 &ndash; $50</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-price/gifts-goods-shop-by-price-gifts-50-100.html">Gifts $50 &ndash; $100</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-price/gifts-goods-shop-by-price-gifts-over-100.html">Gifts over $100</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Tea</strong></dt><dd><a href="http://www.peets.com/gifts-goods/by-tea/gifts-goods-tea-gifts.html">Tea Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-tea/gifts-goods-tea-samplers.html">Tea Samplers</a></dd>
+</dl><dl class="sub-category"><dt><strong>By Coffee</strong></dt><dd><a href="http://www.peets.com/gifts-goods/by-coffee/coffee-gifts.html">Coffee Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-coffee/gifts-goods-coffee-samplers.html">Coffee Samplers</a></dd>
+</dl></div><div class="top-nav-row top-nav-row-2 top-nav-row-last"><dl class="sub-category"><dt><strong>By Occasion</strong></dt><dd><a href="http://www.peets.com/gifts-goods/by-occasion/gifts-goods-shop-by-occasion-wedding-gifts.html">Wedding Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-occasion/gifts-goods-shop-by-occasion-birthday-gifts.html">Birthday Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/by-occasion/gifts-goods-shop-by-occasion-thank-you-gifts.html">Thank You Gifts</a></dd>
+</dl><dl class="sub-category"><dt><strong>Other Gifts</strong></dt><dd><a href="http://www.peets.com/gifts-goods/other-gifts/corporate-gifts.html">Corporate Gifts</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/other-gifts/gifts-goods-drinkware-logo-items.html">Drinkware and Logo Items</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/other-gifts/gifts-goods-treats-spices.html">Treats and Spices</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/other-gifts/gifts-goods-peets-cards.html">Peet's Cards</a></dd>
+<dd><a href="http://www.peets.com/gifts-goods/other-gifts/sale.html">Sale</a></dd>
+</dl><dl class="sub-category"></dl><dl class="sub-category"></dl></div>
+</div></div>
+<div class="top-nav-callout"><div class="top-nav-callout-content"><span>Coffee &amp; Tea tours make great gifts. </span></div></div>
+
+</div>
+<div class="top-nav-aside"><div class="top-nav-aside-content"><div class="top-nav-aside-img"></div><div class="top-nav-aside-text"><h3>Holiday Gifts For Everyone</h3><p><span>Delight your friends and family with our festive seasonal gifts.</span></p>
+<p><a href="/gifts-goods/featured-gifts/holiday-gifts.html"><span>Shop Now &#187;</span></a></p></div></div></div>
+
+</div>
+</li><li class="level0 nav-5 level-top parent" data-sub-nav-toggle="sub-nav-5">
+<a href="http://www.peets.com/subscriptions.html" class="level-top">
+
+<span>Subscriptions</span>
+</a>
+<div   class="top-nav top-nav-columns-2 top-nav-subscriptions" data-sub-nav-content="sub-nav-5">
+<div class="top-nav-inner">
+<div class="top-nav-main">
+<div class="top-nav-header"><div class="top-nav-header-inner"><a href="http://www.peets.com/subscriptions.html">LEARN ABOUT SUBSCRIPTIONS &#187;</a></div></div>
+
+<div class="top-nav-items">
+<div class="top-nav-items-inner">
+<div class="top-nav-row top-nav-row-1 top-nav-row-first"><dl class="sub-category"><dt><strong>Create Subscription</strong></dt><dd><a href="http://www.peets.com/subscriptions/create-subscription/subscription-items-coffee.html">Coffee Subscriptions</a></dd>
+<dd><a href="http://www.peets.com/subscriptions/create-subscription/tea-subscriptions.html">Tea Subscriptions</a></dd>
+<dd><a href="http://www.peets.com/subscriptions/create-subscription/filters-accessories-subscriptions.html">Filters &amp; Accessories Subscriptions</a></dd>
+<dd><a href="http://www.peets.com/subscriptions/create-subscription/about-peets-subscriptions.html">About Peet's Subscriptions</a></dd>
+</dl><dl class="sub-category"><dt><strong>Manage Subscription</strong></dt><dd><a href="http://www.peets.com/subscriptions/manage-subscription/view-my-subscriptions.html">View my Subscription(s)</a></dd>
+</dl></div>
+</div></div>
+<div class="top-nav-callout"><div class="top-nav-callout-content"><span>10% Savings on all Peet’s Coffee and Tea Subscriptions</span></div></div>
+
+</div>
+<div class="top-nav-aside"><div class="top-nav-aside-content"><div class="top-nav-aside-img"><img src="http://d3mrtwiv4dr09z.cloudfront.net/media/catalog/category/TopNavRR_SubscriberBenefits.jpg" alt="Subscriptions" title="Subscriptions" /></div><div class="top-nav-aside-text"><h3>New Subscriber Benefits</h3><p>-10% off all Subscriptions<br />-Subscriber Exclusive Coffees<br />-Discounted Shipping<br />-Convenience and Flexibility</p>
+<p><a href="/subscriptions.html" >Learn More &#187;</a></p></div></div></div>
+
+</div>
+</li><li class="level0 nav-6 current level-top last parent" data-sub-nav-toggle="sub-nav-6">
+<a href="http://www.peets.com/stores.html" class="level-top">
+
+<span>Stores</span>
+</a>
+<div   class="top-nav top-nav-columns-2 top-nav-stores" data-sub-nav-content="sub-nav-6">
+<div class="top-nav-inner">
+<div class="top-nav-main">
+<div class="top-nav-header"><div class="top-nav-header-inner"><a href="http://www.peets.com/store-locator">FIND A STORE &#187;</a></div></div>
+
+<div class="top-nav-items">
+<div class="top-nav-items-inner">
+<div class="top-nav-row top-nav-row-1 top-nav-row-first"><dl class="sub-category"><dt><strong>Menus</strong></dt><dd><a href="http://www.peets.com/stores/menus/coffee-espresso-beverages.html">Coffee &amp; Espresso Beverages</a></dd>
+<dd><a href="http://www.peets.com/stores/menus/stores-javiva-blended.html">Blended Refreshment</a></dd>
+<dd><a href="http://www.peets.com/stores/menus/tea-beverages.html">Tea Beverages</a></dd>
+<dd><a href="http://www.peets.com/stores/menus/coffee-free-beverages.html">Coffee-Free Beverages</a></dd>
+<dd><a href="http://www.peets.com/stores/menus/fresh-food.html">Fresh Food</a></dd>
+</dl><dl class="sub-category"><dt><strong>Stores</strong></dt><dd><a href="http://www.peets.com/stores/peets-stores/tastings-events.html">Tastings &amp; Events</a></dd>
+<dd><a href="http://www.peets.com/stores/peets-stores/stores-store-list.html">Store List</a></dd>
+<dd><a href="http://www.peets.com/stores/peets-stores/meet-peets-stores.html">Meet Peet's</a></dd>
+</dl></div>
+</div></div>
+<div class="top-nav-callout"><div class="top-nav-callout-content"><span>Enjoy creamy almond milk in any beverage.</span></div></div>
+
+</div>
+<div class="top-nav-aside"><div class="top-nav-aside-content"><div class="top-nav-aside-img"><img src="http://d3mrtwiv4dr09z.cloudfront.net/media/catalog/category/TopNavRightRail_HolidayBevs_HO.jpg" alt="Stores" title="Stores" /></div><div class="top-nav-aside-text"><h3>Salted Caramel Macchiato</h3><p>Real, buttery caramel, a bit of vanilla, and a hint of French grey sea salt provides a salty-sweet balance to intense, yet sweet ristretto shots of fresh espresso</p>
+<a title="Black Tie" href="/stores/menus/coffee-espresso-beverages/salted-caramel-macchiato.html"><span>Learn More &raquo;</span></a></div></div></div>
+
+</div>
+</li>         </ul>
+    </div>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+        $j(document).ready(function() {
+            var showNav = function() {
+                    var that = $j(this);
+
+                    $j("[data-sub-nav-toggle]").removeClass('active');
+                    that.addClass('active');
+                },
+                hideNav = function() {
+                    var that = $j(this),
+                        navItem =  that.data('sub-nav-toggle'),
+                        currentNavItem = $j("[data-sub-nav-toggle].active")
+                                            .data('sub-nav-toggle');
+                    if (navItem == currentNavItem) {
+                        $j("[data-sub-nav-toggle]").removeClass('active');
+                    }
+                };
+
+            $j("[data-sub-nav-toggle]").hoverIntent({
+                over: showNav,
+                out: hideNav,
+                timeout: 500
+            });
+
+            $j("[data-sub-nav-content]")
+                .each(function(indexInArray) {
+                    var that = $j(this);
+                    setTimeout(function() {
+                        var topNav = that.find('.top-nav-main'),
+                            topNavCallout = topNav.find('.top-nav-callout'),
+                            topNavCalloutHeight = topNavCallout.outerHeight();
+                        topNav.css({
+                            paddingBottom: topNavCalloutHeight + 10
+                        })
+                    }, (indexInArray + 1)  * 300)
+                });
+
+            // Navigation UX for touch devices
+            var hasTouch;
+            if (!window.addEventListener) {
+                window.attachEvent('touchstart', function setHasTouch () {
+                            hasTouch = true;
+                            window.detachEvent('touchstart', setHasTouch);
+                        }, false);
+            }
+            else {
+               window.addEventListener('touchstart', function setHasTouch () {
+                            hasTouch = true;
+                            window.removeEventListener('touchstart', setHasTouch);
+                        }, false);
+            }
+
+/*
+            window.addEventListener('touchstart', function setHasTouch () {
+                hasTouch = true;
+                window.removeEventListener('touchstart', setHasTouch);
+            }, false);
+*/
+
+
+
+            $j("[data-sub-nav-toggle] > a").on('click', function() {
+                if (hasTouch) {
+                    return false;
+                }
+            })
+
+        });
+    //]]>
+</script>
+            <img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/searchicon.png" class="search-icon" alt="Search" />
+            <form id="search_mini_form" action="http://www.peets.com/catalogsearch/result/" method="get">
+<div class="form-search">
+    <input id="search" type="text" name="q" value="" class="input-text" />
+    <script type="text/javascript">
+    //<![CDATA[
+        var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Search');
+    //]]>
+    </script>
+        <div id="search_autocomplete" class="search-autocomplete"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+        searchForm.initAutocomplete('http://www.peets.com/catalogsearch/ajax/suggest/', 'search_autocomplete');
+    //]]>
+    </script>
+</div>
+</form>
+                    </div>
+	</div>
+</div>
+<div id="wrapper">
+        <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website.                </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="main-container col2-left-layout">
+        <div class="main">
+            <div class="col-main">
+                <div class="inner-main">
+                                        
+    <div class="breadcrumbs">
+        <ul>
+                            <li class="home">
+                                            <a href="http://www.peets.com/" title="Go to Home Page">Home</a>
+                                                                <span>&gt; </span>
+                                    </li>
+                            <li class="category104">
+                                            <a href="http://www.peets.com/stores.html" title="">Stores</a>
+                                                                <span>&gt; </span>
+                                    </li>
+                            <li class="category105">
+                                            <a href="http://www.peets.com/stores/menus/coffee-espresso-beverages.html" title="">Coffee &amp; Espresso Beverages</a>
+                                                                <span>&gt; </span>
+                                    </li>
+                            <li class="product">
+                                            Caramel Caffè Latte                                                        </li>
+                    </ul>
+    </div> 
+<div class="social-media-icons">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook "></a>
+<a class="addthis_button_twitter "></a>
+<a class="addthis_button_pinterest_share "></a>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f56a90b4808f2ba"></script>
+<!-- AddThis Button END -->
+</div>
+<div class="clear"></div><script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice([]);
+</script>
+
+<div id="messages_product_view"></div>
+<div class="product-view">
+    <!--form action="http://www.peets.com/checkout/cart/add/uenc/aHR0cDovL3d3dy5wZWV0cy5jb20vc3RvcmVzL21lbnVzL2NvZmZlZS1lc3ByZXNzby1iZXZlcmFnZXMvY2FyYW1lbC1jYWZmZS1sYXR0ZS5odG1s/product/10081/" method="post" id="product_addtocart_form"-->
+        <div class="no-display">
+            <input type="hidden" name="product" value="10081" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+
+        <div class="product-essential storemenuitem">
+        		<div class="product-name storemenuitem">
+            	<h1>Caramel Caffè Latte</h1>
+        		</div>
+                
+            <div class="product-img-box storemenuitem">
+                                              <div class="violator-"></div>            <p class="product-image">
+
+                <img src="http://d3mrtwiv4dr09z.cloudfront.net/media/catalog/product/cache/2/image/300x400/9df78eab33525d08d6e5fb8d27136e95/c/a/caramelcaffelatte_300x400.png" height="400" width="300" alt="" title="" />            </p>
+        
+    
+<!-- [BG] added back in for Equipment PDP (thumbnail gallery display)-->
+            </div>
+
+            <div class="product-overview-short-description storemenuitem">                            
+            	Mouth-watering flavors perfectly paired: sweet caramel sauce, deep-roasted espresso and freshly steamed milk. 
+            </div>
+            
+            <div class="nutritioninfo anchors">                            
+            	<p>Nutritional Information</p>
+            	<a href="#small">Small (12 Oz)</a><a href="#medium">Medium (16 Oz)</a><a href="#large">Large (20 Oz)</a><p class="last">Peet's is committed to freshness. That's why we prepare all our beverages by hand. Because of the variable nature of any food that is hand-crafted, these nutritional values are a guideline. All nutritional information is estimated. Actual nutritional values vary.</p> Recommended limits for a 2,000 calorie daily diet are 20 grams of saturated fat and 2,300 milligrams of sodium. Cholesterol and Sodium measured in milligrams and all other nutritionals measured in grams.
+            </div>
+
+            
+        </div>
+        <div class="clear"></div>
+    <div class="clearfix">
+        <div class="product-view-lc">
+            <div class="long-description">
+            <div class="nutri-info"><h2 id="small">Caramel Caff&egrave; Latte&mdash;Small</h2><table class="Ls" border="0"> <tr class="topHeadLs dark"><th scope="row">&nbsp;</th><th scope="col">Non-Fat Milk</th><th scope="col">2% Milk</th><th scope="col">Whole Milk</th><th scope="col">Soy Milk</th><th scope="col">Almond Milk</th></tr> <tr class="leftHeadLs"><th scope="row">Calories</th><td>255</td><td>305</td><td>325</td><td>245</td><td>245</td></tr> <tr class="leftHeadLs"><th scope="row">Fat - Total</th><td>0g</td><td>5g</td><td>8g</td><td>3g</td><td>4g</td></tr> <tr class="leftHeadLs"><th scope="row">Saturated Fat</th><td>0g</td><td>3g</td><td>5g</td><td>4g</td><td>4g</td></tr> <tr class="leftHeadLs"><th scope="row">Trans Fats</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>0g</td></tr> <tr class="leftHeadLs"><th scope="row">Cholesterol</th><td>0mg</td><td>20mg</td><td>35mg</td><td>0mg</td><td>0mg</td></tr> <tr class="leftHeadLs"><th scope="row">Sodium</th><td>185mg</td><td>195mg</td><td>180mg</td><td>285mg</td><td>255mg</td></tr> <tr class="leftHeadLs"><th scope="row">Carbohydrates</th><td>50g</td><td>50g</td><td>50g</td><td>45g</td><td>50g</td></tr> <tr class="leftHeadLs"><th scope="row">Dietary Fiber</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>1g</td></tr> <tr class="leftHeadLs"><th scope="row">Sugars</th><td>53g</td><td>54g</td><td>52g</td><td>46g</td><td>48g</td></tr> <tr class="leftHeadLs"><th scope="row">Protein</th><td>10g</td><td>11g</td><td>9g</td><td>6g</td><td>2g</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin A</th><td>10%</td><td>10%</td><td>6%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin C</th><td>2%</td><td>2%</td><td>2%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin D</th><td>25%</td><td>25%</td><td>25%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Calcium</th><td>30%</td><td>35%</td><td>30%</td><td>2%</td><td>2%</td></tr> <tr class="leftHeadLs"><th scope="row">Iron</th><td>0%</td><td>0%</td><td>0%</td><td>4%</td><td>2%</td></tr></table></div><div class="nutri-info"><h2 id="medium">Caramel Caff&egrave; Latte&mdash;Medium</h2><table class="Ls" border="0"> <tr class="topHeadLs dark"><th scope="row">&nbsp;</th><th scope="col">Non-Fat Milk</th><th scope="col">2% Milk</th><th scope="col">Whole Milk</th><th scope="col">Soy Milk</th><th scope="col">Almond Milk</th></tr> <tr class="leftHeadLs"><th scope="row">Calories</th><td>295</td><td>365</td><td>395</td><td>280</td><td>280</td></tr> <tr class="leftHeadLs"><th scope="row">Fat - Total</th><td>0g</td><td>7g</td><td>12g</td><td>4g</td><td>5g</td></tr> <tr class="leftHeadLs"><th scope="row">Saturated Fat</th><td>0g</td><td>4g</td><td>7g</td><td>4g</td><td>4g</td></tr> <tr class="leftHeadLs"><th scope="row">Trans Fats</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>0g</td></tr> <tr class="leftHeadLs"><th scope="row">Cholesterol</th><td>0mg</td><td>25mg</td><td>50mg</td><td>0mg</td><td>0mg</td></tr> <tr class="leftHeadLs"><th scope="row">Sodium</th><td>240mg</td><td>255mg</td><td>235mg</td><td>385mg</td><td>340mg</td></tr> <tr class="leftHeadLs"><th scope="row">Carbohydrates</th><td>55g</td><td>60g</td><td>55g</td><td>50g</td><td>50g</td></tr> <tr class="leftHeadLs"><th scope="row">Dietary Fiber</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>1g</td></tr> <tr class="leftHeadLs"><th scope="row">Sugars</th><td>59g</td><td>60g</td><td>57g</td><td>49g</td><td>52g</td></tr> <tr class="leftHeadLs"><th scope="row">Protein</th><td>14g</td><td>16g</td><td>13g</td><td>8g</td><td>3g</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin A</th><td>14%</td><td>14%</td><td>9%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin C</th><td>3%</td><td>3%</td><td>3%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin D</th><td>36%</td><td>36%</td><td>36%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Calcium</th><td>43%</td><td>50%</td><td>43%</td><td>3%</td><td>3%</td></tr> <tr class="leftHeadLs"><th scope="row">Iron</th><td>0%</td><td>0%</td><td>0%</td><td>6%</td><td>3%</td></tr></table></div><div class="nutri-info"><h2 id="large">Caramel Caff&egrave; Latte&mdash;Large</h2><table class="Ls" border="0"> <tr class="topHeadLs dark"><th scope="row">&nbsp;</th><th scope="col">Non-Fat Milk</th><th scope="col">2% Milk</th><th scope="col">Whole Milk</th><th scope="col">Soy Milk</th><th scope="col">Almond Milk</th></tr> <tr class="leftHeadLs"><th scope="row">Calories</th><td>360</td><td>440</td><td>470</td><td>345</td><td>345</td></tr> <tr class="leftHeadLs"><th scope="row">Fat - Total</th><td>0g</td><td>8g</td><td>13g</td><td>5g</td><td>6g</td></tr> <tr class="leftHeadLs"><th scope="row">Saturated Fat</th><td>0g</td><td>5g</td><td>8g</td><td>5g</td><td>5g</td></tr> <tr class="leftHeadLs"><th scope="row">Trans Fats</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>0g</td></tr> <tr class="leftHeadLs"><th scope="row">Cholesterol</th><td>0mg</td><td>30mg</td><td>55mg</td><td>0mg</td><td>0mg</td></tr> <tr class="leftHeadLs"><th scope="row">Sodium</th><td>275mg</td><td>290mg</td><td>265mg</td><td>430mg</td><td>385mg</td></tr> <tr class="leftHeadLs"><th scope="row">Carbohydrates</th><td>70g</td><td>75g</td><td>70g</td><td>65g</td><td>65g</td></tr> <tr class="leftHeadLs"><th scope="row">Dietary Fiber</th><td>0g</td><td>0g</td><td>0g</td><td>0g</td><td>2g</td></tr> <tr class="leftHeadLs"><th scope="row">Sugars</th><td>74g</td><td>75g</td><td>72g</td><td>63g</td><td>66g</td></tr> <tr class="leftHeadLs"><th scope="row">Protein</th><td>16g</td><td>17g</td><td>14g</td><td>9g</td><td>3g</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin A</th><td>16%</td><td>16%</td><td>9%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin C</th><td>3%</td><td>3%</td><td>3%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Vitamin D</th><td>39%</td><td>39%</td><td>39%</td><td>0%</td><td>0%</td></tr> <tr class="leftHeadLs"><th scope="row">Calcium</th><td>47%</td><td>55%</td><td>47%</td><td>3%</td><td>3%</td></tr> <tr class="leftHeadLs"><th scope="row">Iron</th><td>0%</td><td>0%</td><td>0%</td><td>6%</td><td>3%</td></tr></table></div><br />
+            <p>Nutritional values shown above do not include whipped cream. One serving of whipped cream has 118 calories.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="product-view-rc">
+            <div class="find-peets-module">
+                <div class="item-1 item">
+<div class="promo rail find-a-store">
+<h3 class="promoForm"><img height="28" width="19" border="0" alt="Find Peet's near you" src="http://d3mrtwiv4dr09z.cloudfront.net/media/wysiwyg/icon-map-find-a-store.png"> Find Peet's near you</h3>
+<form action="/store-locator" class="promoForm">
+<p><input type="hidden" value="retail" name="type"><input type="text" size="24" value="City/State or Zip" name="search_term" onfocus="if (this.value=='City/State or Zip') this.value=''" tabindex="1" class="promoInput" id="search_term"> <input type="submit" value="GO" class="promoSubmit"></p>
+</form>
+<p class="description subtext"><a href="http://www.peets.com/store-locator" class="subtext">Find Peet's at a grocery store near you &#187;</a></p>
+</div></div>            </div>
+            <div class="need-help-popup">
+                <h5 class="need-help-headline">NEED ASSISTANCE? WE&rsquo;RE HERE.</h5>
+<p class="need-help-phone-hours"><strong>(800) 999-2132</strong><br />M &ndash; F 6 am &ndash; 6 pm PT</p>
+<a class="need-help-chat livechat-section" href="javascript:void(null)" onclick="LC_API.open_chat_window()"><strong>Live Chat</strong></a>            </div>
+        </div>
+    </div>
+		<!--/form-->
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[       
+    
+    jQuery(document).ready(function() {
+      var nutriinfo = jQuery(".nutri-info").length;
+      //alert(nutriinfo);
+      if (nutriinfo == 1){ //single nutrtion info
+      	jQuery(".nutri-info").addClass("nutri-info single");
+      }
+      
+      if (nutriinfo > 1){ //last nutrtion info
+      	jQuery(".long-description .nutri-info:first").addClass("nutri-info first").wrapInner('<div class="bkgd-fix" />');
+      	jQuery(".long-description .nutri-info:last").addClass("nutri-info last");
+      }
+		});
+
+//]]>
+</script>
+                </div>
+            </div>
+            <div class="col-left sidebar"><div class="left-nav">
+                                    <dl class="sub-category">
+                <dt>Menus</dt>
+                                                        <dd>
+                        <a href="http://www.peets.com/stores/menus/coffee-espresso-beverages.html"
+                             class="current">
+                            Coffee &amp; Espresso Beverages                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/menus/stores-javiva-blended.html"
+                            >
+                            Blended Refreshment                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/menus/tea-beverages.html"
+                            >
+                            Tea Beverages                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/menus/coffee-free-beverages.html"
+                            >
+                            Coffee-Free Beverages                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/menus/fresh-food.html"
+                            >
+                            Fresh Food                        </a>
+                    </dd>
+                                                </dl>
+                                                        <dl class="sub-category">
+                <dt>Stores</dt>
+                                                        <dd>
+                        <a href="http://www.peets.com/stores/peets-stores/tastings-events.html"
+                            >
+                            Tastings &amp; Events                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/peets-stores/stores-store-list.html"
+                            >
+                            Store List                        </a>
+                    </dd>
+                                                                            <dd>
+                        <a href="http://www.peets.com/stores/peets-stores/meet-peets-stores.html"
+                            >
+                            Meet Peet's                        </a>
+                    </dd>
+                                                </dl>
+                                                        </div>
+</div>
+        </div>
+    </div>
+    
+
+
+<div id="footer">
+	<div class="main content">
+        		<div class="footerPrimaryLinks footerMenu">
+			<ul>
+<li><a href="http://www.peets.com/customer/account/login">My Account</a></li>
+<li><a href="https://www.peets.com/customer-service/contact-us">Customer Service</a></li>
+<li><a href="http://www.peets.com/store-locator">Find Peet&rsquo;s</a></li>
+<li><a href="http://www.peets.com/stores.html">At Peet&rsquo;s Stores</a></li>
+<li><a href="http://www.peets.com/grocery.html">At Grocery Stores</a></li>
+<li><a href="http://www.peets.com/peetscard/main">Peet&rsquo;s Card</a></li>
+<li><a href="http://www.peets.com/newsletter">Newsletter Sign-up</a></li>
+</ul>		</div>
+		<div class="footerShopMenu footerMenu">
+			<ul>
+<li class="subHead">Shop</li>
+<li><a href="http://www.peets.com/coffee.html">Coffee</a></li>
+<li><a href="http://www.peets.com/tea.html">Tea</a></li>
+<li><a href="http://www.peets.com/gifts-goods.html">Gifts &amp; Goods</a></li>
+<li><a href="http://www.peets.com/equipment.html">Equipment</a></li>
+<li><a href="http://www.peets.com/sale.html">Sale</a></li>
+<li><a href="http://www.peets.com/subscriptions.html">Subscriptions</a></li>
+</ul>		</div>
+
+		<div class="footerAboutUsMenu footerMenu">
+			<ul id="footer-about-menu">
+<li class="subHead">About Us</li>
+<li><a href="http://www.peets.com/about-us/our-history">Our History</a></li>
+<li><a href="http://www.peets.com/about-us/our-people">Our People</a></li>
+<li><a href="http://www.peets.com/coffee/coffee-inside-the-cup/coffee-inside-the-cup-meet-the-roasters.html">Meet the Roasters</a></li>
+<li><a href="http://www.peets.com/community/community-sustainability.html">Sustainability</a></li>
+<li><a href="http://www.peets.com/about-us/careers">Careers</a></li>
+<li><a href="http://www.peets.com/about-us/newsroom">Newsroom</a></li>
+<li><a href="http://www.peets.com/about-us/company-info">Company Info</a></li>
+<li><a href="https://www.peets.com/customer-service/contact-us">Contact Us</a></li>
+</ul>
+		</div>
+
+		<div class="footerForBusinessMenu footerMenu">
+			<ul id="footer-business-menu">
+<li class="subHead">For Business</li>
+<li><a href="http://www.peets.com/business/corporate-gifting">Corporate Gifting</a></li>
+<li><a href="http://www.peets.com/business/office-coffee">Office Coffee</a></li>
+<li><a href="http://www.peets.com/business/food-services">Food Service</a></li>
+</ul>		</div>
+
+		<div class="footerJoinUsMenu footerMenu">
+			<ul>
+<li class="subHead">Join Us On</li>
+<li><a href=" http://www.twitter.com/PeetsCoffee" target="_blank"><img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/twittericon.png" alt="" />Twitter</a></li>
+<li><a href=" http://www.facebook.com/peets" target="_blank"><img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/facebookicon.png" alt="" />Facebook</a></li>
+<li><a href=" http://www.instagram.com/peetscoffee" target="_blank"><img src="http://dy999ib17dqym.cloudfront.net/skin/frontend/peets/main/images/instagramicon.png" alt="" />Instagram</a></li>
+</ul>
+		</div>
+        
+		<div class="copyright">
+			<p><span>&copy; 2015 PEET&rsquo;S COFFEE &amp; TEA</span> <a href="/privacy-policy">PRIVACY POLICY</a> <a href="/terms-of-service">TERMS OF SERVICE</a></p>
+
+		</div>
+	</div>
+</div>
+<div style="display: none;"><p>2015-11-29 04:12:07</p></div>
+
+    <div style="display: none;"><p>Auto Coupon Caught!</p></div></div>
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/e13c7edd-6972-4856-be7f-1ac9431c68c8/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"21940",type:"1",actionid:"163815"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/e13c7edd-6972-4856-be7f-1ac9431c68c8/analytics.html?dedup=1&domainId=21940&type=1&actionid=163815" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0041/7596.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5c555fe63a","applicationID":"2174342","transactionName":"YFAENkMACxVUARdaClkaJwFFCAoIGgECRwRbWgFNQRMKAkABFxwTXlAR","queueTime":0,"applicationTime":489,"atts":"TBcHQAsaGBs=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>
